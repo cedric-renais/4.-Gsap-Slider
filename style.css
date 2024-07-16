@@ -1,0 +1,134 @@
+:root {
+  --white: #f1f1f1;
+  --black: #222;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin-inline: 0;
+  margin-block: 0;
+  padding-inline: 0;
+  padding-block: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--black);
+  padding-inline: 20px;
+}
+
+.slider {
+  position: relative;
+  block-size: 500px;
+  max-inline-size: 900px;
+  margin-block-start: 125px;
+  margin-inline: auto;
+}
+
+.slider__counter {
+  position: absolute;
+  z-index: 150;
+  top: -45px;
+  right: 0;
+  inline-size: 45px;
+  block-size: 45px;
+  background: var(--white);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.slider__counter span:nth-child(1) {
+  font-size: 26px;
+}
+.slider__counter span:nth-child(2) {
+  font-size: 16px;
+}
+
+.slider__container {
+  block-size: 100%;
+  inline-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__buttons {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  padding-inline-start: 20px;
+  padding-block-end: 20px;
+}
+
+.slider__buttons button {
+  padding-block: 10px;
+  padding-inline: 12px;
+  border-radius: 3px;
+  border: 1px solid var(--white);
+  background: transparent;
+  color: var(--white);
+  outline: none;
+  cursor: pointer;
+}
+
+.slider__buttons button:active {
+  transform: scale(1.05);
+}
+
+.slider__buttons button img {
+  inline-size: 20px;
+}
+
+.slider__buttons button:nth-child(1) {
+  margin-inline-end: 5px;
+}
+
+.slider__slide {
+  block-size: 100%;
+  inline-size: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  color: var(--white);
+  transform: translateX(-100%);
+}
+
+.slider__slide h2 {
+  font-size: 45px;
+  padding-block-start: 300px;
+  text-transform: uppercase;
+  padding-inline-start: 20px;
+}
+
+.slider__slide hr {
+  border: none;
+  inline-size: 200px;
+  block-size: 1px;
+  background: var(--white);
+  margin-block: 10px;
+  margin-inline-start: 21px;
+  display: block;
+}
+
+.slider__slide p {
+  font-size: 16px;
+  padding-inline-start: 20px;
+}
+
+.slider__slide--one {
+  background-image: url(./sources/forest1.jpg);
+  transform: translateX(0%);
+}
+
+.slider__slide--two {
+  background-image: url(./sources/forest2.jpg);
+}
+
+.slider__slide--three {
+  background-image: url(./sources/forest3.jpg);
+}
